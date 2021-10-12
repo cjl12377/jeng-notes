@@ -1,8 +1,25 @@
-site_name: obsidian-mkdocs template
+site_name: jeng-notes
 
 theme:
-    name: 'material'
-    palette:
+    name: null
+    palette: mkdocs-material/material
+    
+    # 404 page
+    static_templates:
+      - 404.html
+
+  # Necessary for search to work properly
+  include_search_page: false
+  search_index_only: true
+
+  # Default values, taken from mkdocs_theme.yml
+  language: en
+  font:
+    text: Roboto
+    code: Roboto Mono
+  favicon: assets/favicon.png
+  icon:
+    logo: logo
 
     # Light mode
     - media: "(prefers-color-scheme: light)"
@@ -34,7 +51,7 @@ markdown_extensions:
   #     custom_checkbox: true
 #  - pymdownx.emoji:
 #      emoji_generator: !!python/name:pymdownx.emoji.to_svg
-  # - admonition
+  - admonition
   - toc:
       permalink: true
 
